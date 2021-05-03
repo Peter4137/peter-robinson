@@ -1,0 +1,35 @@
+.home-page {
+  @extend .app-page;
+  background-color: $colour-primary;
+  scroll-snap-type: y mandatory;
+  height: calc(100vh - #{$header-height});
+  overflow-y: scroll;
+
+  .home-page__section {
+    scroll-snap-align: start;
+    height: 80%;
+
+    &.left {
+      text-align: left;
+    }
+
+    &.right {
+      text-align: right;
+    }
+
+    &.bottom {
+      height: 20%;
+    }
+  }
+
+  .home-page__section-title {
+    padding: 16px;
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+
+  .home-page__section-text {
+    font-size: 20px;
+    padding: 16px;
+  }
+}
