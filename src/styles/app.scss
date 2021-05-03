@@ -1,6 +1,13 @@
-.app-page {
-  margin-top: $header-height;
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .app-page {
+    //margin-top: $header-height;
+  }
 }
+
 html {
   overflow: hidden;
 }

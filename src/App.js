@@ -25,11 +25,11 @@ function App() {
 
 
   return (
-    <div>
+    <div className={"app"}>
         <Header headerItemClicked={headerItemClicked}/>
         {getCurrentPage()}
     </div>
-  );
+);
 }
 
 export default App;

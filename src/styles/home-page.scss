@@ -1,24 +1,30 @@
 .home-page {
   @extend .app-page;
-  background-color: $colour-primary;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   height: calc(100vh - #{$header-height});
   overflow-y: scroll;
 
   .home-page__section {
     scroll-snap-align: start;
-    height: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &.left {
+      align-items: flex-start;
       text-align: left;
     }
 
     &.right {
+      align-items: flex-end;
       text-align: right;
     }
 
     &.bottom {
-      height: 20%;
+      height: 30%;
+      flex-direction: row;
+      justify-content: center;
     }
   }
 
@@ -29,7 +35,36 @@
   }
 
   .home-page__section-text {
-    font-size: 20px;
+    font-size: 14px;
     padding: 16px;
+    max-width: 60%;
+  }
+
+  .home-page__image-container {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .home-page__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .home-page__link-container {
+    margin: 16px;
+    height: 64px;
+  }
+
+  .home-page__link-image {
+    width: 48px;
+    height: 48px;
   }
 }
