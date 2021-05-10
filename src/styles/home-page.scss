@@ -3,6 +3,12 @@
   //scroll-snap-type: y proximity;
   height: calc(100vh - #{$header-height});
   overflow: hidden scroll;
+  width: 100%;
+  padding: 0 calc((100% - #{$max-page-width}) / 2);
+
+  @media only screen and (min-width: $max-page-width) {
+    width: $max-page-width;
+  }
 
   .home-page__section {
     //scroll-snap-align: start;
@@ -24,14 +30,14 @@
 
     &.bottom {
       padding-top: 10px;
-      height: 20%;
+      height: 30%;
       flex-direction: row;
       justify-content: center;
     }
   }
 
   .home-page__section-title {
-    padding: 16px;
+    padding: 26px;
     font-size: 24px;
     text-transform: uppercase;
     color: white;

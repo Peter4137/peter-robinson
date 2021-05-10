@@ -8,6 +8,7 @@ export default function Home(props) {
 
     return <div className={"home-page"}>
         <div className={"home-page__section left"}>
+            <Fade right>
                 <div>
                     <div className={"home-page__section-title"}>About me</div>
                     <div className={"home-page__section-text"}>
@@ -15,9 +16,12 @@ export default function Home(props) {
                         work for Softwire Ltd.
                     </div>
                 </div>
-            <div className={"home-page__image-container"}>
-                <img className={"home-page__image"} src={home1} alt={"Cycling"}/>
-            </div>
+            </Fade>
+            <Fade right>
+                <div className={"home-page__image-container"}>
+                    <img className={"home-page__image"} src={home1} alt={"Cycling"}/>
+                </div>
+            </Fade>
         </div>
         <div className={"home-page__section left"}>
                 <Fade left>
