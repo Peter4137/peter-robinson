@@ -8,12 +8,14 @@
   background-color: $colour-primary;
   color: $white;
   z-index: 1;
+  box-shadow: 0 0 5px 5px $dark-grey;
 
   .header__title {
     flex: 5;
     font-size: 28px;
     text-align: center;
     font-family: $font-main;
+    font-weight: lighter;
     text-transform: uppercase;
     margin: 0 8px;
   }
